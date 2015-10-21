@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--  Copyright (C) 2015 Android Open Source Illusion Project
+
+  This program is free software: you can redistribute it and/or modify
+  it under the terms of the GNU General Public License as published by
+  the Free Software Foundation, either version 3 of the License, or
+  (at your option) any later version.
+
+  This program is distributed in the hope that it will be useful,
+  but WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+  GNU General Public License for more details.
+
+  You should have received a copy of the GNU General Public License
+  along with this program.  If not, see <http://www.gnu.org/licenses/>.
+ -->
+
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- Tabs -->
+    <string name="generalui_category">Empty</string>
+    <string name="statusbar_category">Status Bar</string>
+    <string name="navigation_category">Navigation Bar</string>
+    <string name="multitasking_category">Empty</string>
+    <string name="system_category">Empty</string>
+    <string name="misc_category">Empty</string>
+
+    <!-- Dialog -->
+    <string name="owlsnest_dialog_title">Welcome to AOSiP</string>
+    <string name="owlsnest_dialog_message">No one is perfect!\n\nSo if you find a bug with any of these settings, please inform the developer with the following.\n\n1. Logcat or Last_Kmsg\n2. Kernel and Mods used\n3. Useful information\n\nIf you fail to report something, do not expect things to be fixed. Remember, although we work hard to find and squash all the bugs before release we do miss things.</string>
+    <string name="owlsnest_dialog_toast">READ THE WHOLE THING!</string>
+
+    <string name="systemuituner">Tiles and icons</string>
+
+</resources>
