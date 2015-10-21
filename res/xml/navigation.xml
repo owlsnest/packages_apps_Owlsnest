@@ -21,5 +21,24 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+            android:key="cursor"
+            android:title="@string/cursor_section_header">
+
+            <ListPreference
+                android:dialogTitle="@string/volume_key_cursor_control_title"
+                android:entries="@array/volume_key_cursor_control_entries"
+                android:entryValues="@array/volume_key_cursor_control_values"
+                android:key="volume_key_cursor_control"
+                android:persistent="false"
+                android:title="@string/volume_key_cursor_control_title"
+            />
+            
+            <SwitchPreference
+                android:key="volume_rocker_wake"
+                android:summary="@string/volume_rocker_wake_summary"
+                android:title="@string/volume_rocker_wake_title" />
+
+    </PreferenceCategory>
 </PreferenceScreen>
 

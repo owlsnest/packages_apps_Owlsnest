@@ -20,16 +20,27 @@
     <!-- Tabs -->
     <string name="generalui_category">Empty</string>
     <string name="statusbar_category">Status Bar</string>
-    <string name="navigation_category">Navigation Bar</string>
+    <string name="navigation_category">Navigation</string>
     <string name="multitasking_category">Empty</string>
     <string name="system_category">Empty</string>
     <string name="misc_category">Empty</string>
 
     <!-- Dialog -->
-    <string name="owlsnest_dialog_title">Welcome to AOSiP</string>
+    <string name="owlsnest_dialog_title">Welcome to the Owlsnest</string>
     <string name="owlsnest_dialog_message">No one is perfect!\n\nSo if you find a bug with any of these settings, please inform the developer with the following.\n\n1. Logcat or Last_Kmsg\n2. Kernel and Mods used\n3. Useful information\n\nIf you fail to report something, do not expect things to be fixed. Remember, although we work hard to find and squash all the bugs before release we do miss things.</string>
     <string name="owlsnest_dialog_toast">READ THE WHOLE THING!</string>
 
     <string name="systemuituner">Tiles and icons</string>
+
+    <!--Volume rocker cursor control -->
+    <string name="cursor_section_header">Volume rocker</string>
+    <string name="volume_key_cursor_control_title">Volume key cursor control</string>
+    <string name="volume_key_cursor_control_off">Disabled</string>
+    <string name="volume_key_cursor_control_on">Volume up/down moves cursor left/right</string>
+    <string name="volume_key_cursor_control_on_reverse">Volume up/down moves cursor right/left</string>
+
+    <!-- Volume rocker wake -->
+    <string name="volume_rocker_wake_title">Volume rocker wake</string>
+    <string name="volume_rocker_wake_summary">Pressing the volume keys will wake your device</string>
 
 </resources>
