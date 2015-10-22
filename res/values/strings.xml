@@ -99,4 +99,13 @@
     <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
     <string name="double_tap_to_sleep_summary">Double tap status bar to put the device to sleep</string>
 
+    <!-- Battery styles -->
+    <string name="battery_title">Battery</string>
+    <string name="battery_style_summary">Customize battery style</string>
+    <string name="battery_summary">Click to see battery style options.</string>
+    <string name="battery_style_title">Style</string>
+    <string name="battery_percent_title">Show percent</string>
+    <string name="battery_percent_none">Never</string>
+    <string name="battery_percent_always">Always</string>
+    <string name="battery_percent_expanded">Expanded</string>
 </resources>

@@ -25,15 +25,21 @@
         android:title="@string/status_bar_style_title">
 
         <PreferenceScreen
-            android:fragment="com.aosip.owlsnest.tabs.StatusBarClockStyle"
+            android:key="statusbar_battery"
+            android:fragment="com.aosip.owlsnest.tabs.StatusBarBattery"
+            android:title="@string/battery_title"
+            android:summary="@string/battery_style_summary" />
+
+        <PreferenceScreen
             android:key="clock_style_pref"
-            android:summary="@string/status_bar_clock_summary"
-            android:title="@string/status_bar_clock" />
+            android:fragment="com.aosip.owlsnest.tabs.StatusBarClockStyle"
+            android:title="@string/status_bar_clock"
+            android:summary="@string/status_bar_clock_summary" />
 
         <PreferenceScreen
             android:key="systemuituner"
             android:title="@string/systemuituner" 
-           android:summary="@string/status_bar_tiles_summary">
+            android:summary="@string/status_bar_tiles_summary">
             <intent
                 android:action="android.intent.action.MAIN"
                 android:targetPackage="com.android.systemui"
