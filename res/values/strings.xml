@@ -24,6 +24,9 @@
     <string name="multitasking_category">Empty</string>
     <string name="system_category">Empty</string>
     <string name="misc_category">Empty</string>
+    <string name="status_bar_actions_title">Actions</string>
+    <string name="status_bar_clock_summary">Adjust clock and date style</string>
+    <string name="status_bar_tiles_summary">Add/remove tiles and statusbar icons</string>
 
     <!-- Color Picker -->
     <string name="dialog_color_picker">Color Picker</string>
@@ -87,4 +90,13 @@
     <string name="clock_date_style_uppercase">Uppercase</string>
     <string name="clock_date_format_custom">Custom java format</string>
     <string name="status_bar_clock_style_reset_message">Reset clock color?</string>
+
+    <!-- Status bar quick qs pulldown -->
+    <string name="status_bar_quick_qs_pulldown_title">Quick pulldown</string>
+    <string name="status_bar_quick_qs_pulldown_summary">Right edge of the status bar pulls down Quick Settings</string>
+
+    <!-- tap-to-sleep -->
+    <string name="double_tap_to_sleep_title">Double-tap to sleep</string>
+    <string name="double_tap_to_sleep_summary">Double tap status bar to put the device to sleep</string>
+
 </resources>
