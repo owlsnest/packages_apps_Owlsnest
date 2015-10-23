@@ -54,9 +54,11 @@ public class Navigation extends SettingsPreferenceFragment implements
 
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
+    private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
 
     private ListPreference mVolumeKeyCursorControl;
     private SwitchPreference mVolumeRockerWake;
+    private SwitchPreference mKillAppLongPressBack;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -75,6 +77,13 @@ public class Navigation extends SettingsPreferenceFragment implements
         int volumeRockerWake = Settings.System.getInt(getContentResolver(),
                 VOLUME_ROCKER_WAKE, 0);
         mVolumeRockerWake.setChecked(volumeRockerWake != 0);
+
+        // kill-app long press back
+        mKillAppLongPressBack = (SwitchPreference) findPreference(KILL_APP_LONGPRESS_BACK);
+        mKillAppLongPressBack.setOnPreferenceChangeListener(this);
+        int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
+                KILL_APP_LONGPRESS_BACK, 0);
+        mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -111,6 +120,11 @@ public class Navigation extends SettingsPreferenceFragment implements
             Settings.System.putInt(getContentResolver(), VOLUME_ROCKER_WAKE,
                     value ? 1 : 0);
          return true;
+        } else if (preference == mKillAppLongPressBack) {
+            boolean value = (Boolean) newValue;
+            Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
+                    value ? 1 : 0);
+            return true;
         }
         return false;
     }
