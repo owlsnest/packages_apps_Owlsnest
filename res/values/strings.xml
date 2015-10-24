@@ -17,12 +17,12 @@
 
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
-    <!-- Tabs -->
-    <string name="generalui_category">Empty</string>
+    <!-- Tabs -->    
     <string name="statusbar_category">Status Bar</string>
     <string name="navigation_category">Navigation</string>
-    <string name="multitasking_category">Empty</string>
-    <string name="system_category">Empty</string>
+    <string name="lockscreen_category">Lockscreen</string>
+    <string name="generalui_category">Misc</string>
+    <string name="recents_category">Recents</string>
     <string name="misc_category">Empty</string>
     <string name="status_bar_actions_title">Actions</string>
     <string name="status_bar_clock_summary">Adjust clock and date style</string>

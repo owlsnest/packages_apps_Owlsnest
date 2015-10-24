@@ -175,7 +175,10 @@ public class Owlsnest extends SettingsPreferenceFragment {
         public StatusBarAdapter(FragmentManager fm) {
             super(fm);
             frags[0] = new StatusBar();
-            frags[1] = new Navigation();
+            frags[1] = new Lockscreen();
+            frags[2] = new Navigation();
+            frags[3] = new Recents();
+            frags[4] = new Misc();
         }
 
         @Override
@@ -198,11 +201,17 @@ public class Owlsnest extends SettingsPreferenceFragment {
         if (!DeviceUtils.isPhone(getActivity())) {
         titleString = new String[]{
                     getString(R.string.statusbar_category),
-                    getString(R.string.navigation_category)};
+                    getString(R.string.lockscreen_category),
+                    getString(R.string.navigation_category),
+                    getString(R.string.recents_category),
+                    getString(R.string.generalui_category)};
         } else {
         titleString = new String[]{
                     getString(R.string.statusbar_category),
-                    getString(R.string.navigation_category)};
+                    getString(R.string.lockscreen_category),
+                    getString(R.string.navigation_category),
+                    getString(R.string.recents_category),
+                    getString(R.string.generalui_category)};
         }
         return titleString;
     }
