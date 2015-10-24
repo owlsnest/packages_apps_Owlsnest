@@ -28,6 +28,16 @@
     <string name="status_bar_clock_summary">Adjust clock and date style</string>
     <string name="status_bar_tiles_summary">Add/remove tiles and statusbar icons</string>
 
+    <!-- Global used -->
+    <string name="text_title">Text</string>
+    <string name="always_title">Always</string>
+    <string name="number_of_notifications_title">Number of notifications</string>
+    <string name="number_of_notifications_two_title">2</string>
+    <string name="number_of_notifications_three_title">3</string>
+    <string name="number_of_notifications_four_title">4</string>
+    <string name="number_of_notifications_five_title">5</string>
+    <string name="number_of_notifications_six_title">6</string>
+
     <!-- Color picker -->
     <string name="dialog_color_picker_title">Color Picker</string>
     <string name="press_color_to_apply">Press on color below to apply</string>
@@ -121,4 +131,23 @@
     <!-- kill app long press back -->
     <string name="kill_app_longpress_back">Kill app back button</string>
     <string name="kill_app_longpress_back_summary">Kill the foreground app by long-pressing the back key</string>
+
+    <!-- Status bar -->
+    <string name="status_bar_carrier_label_settings_title">Carrier label</string>
+    <string name="status_bar_carrier_label_settings_summary">Customize the carrier label</string>
+
+    <!-- Carrier label settings -->
+    <string name="carrier_label_cat_notification_icons_title">Notification icons</string>
+    <string name="carrier_label_show_title">Show</string>
+    <string name="carrier_label_show_summary">Enable to show the (custom) carrier label on the status bar</string>
+    <string name="carrier_label_show_on_lock_screen_title">Show on lock screen</string>
+    <string name="carrier_label_show_on_lock_screen_summary">Enable to show the (custom) carrier label on the status bar of the lock screen</string>
+    <string name="carrier_label_use_custom_title">Custom carrier label</string>
+    <string name="carrier_label_use_custom_summary">Enable to use a custom carrier label</string>
+    <string name="carrier_label_custom_label_title">Custom label</string>
+    <string name="carrier_label_custom_label_dlg_message">Enter a new custom label to display instead of the real carrier name. An empty field will revert the name to \'AOSiP\'</string>
+    <string name="carrier_label_hide_label_title">Hide</string>
+    <string name="carrier_label_hide_label_summary">Enable to choose a number of visible notification icons to hide the (custom) carrier label on the status bar</string>
+    <string name="carrier_label_number_of_notification_icons_title">Number of notification icons</string>
+
 </resources>
