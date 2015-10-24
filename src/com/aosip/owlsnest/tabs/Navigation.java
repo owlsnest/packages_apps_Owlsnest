@@ -34,6 +34,7 @@ import android.preference.Preference.OnPreferenceChangeListener;
 import android.preference.CheckBoxPreference;
 import android.preference.ListPreference;
 import android.preference.PreferenceCategory;
+import android.preference.PreferenceFragment;
 import android.preference.PreferenceScreen;
 import android.preference.SwitchPreference;
 import android.provider.Settings;
@@ -48,6 +49,8 @@ import com.android.settings.SettingsPreferenceFragment;
 import com.android.internal.logging.MetricsLogger;
 import com.android.settings.Utils;
 
+import net.margaritov.preference.colorpicker.ColorPickerPreference;
+
 public class Navigation extends SettingsPreferenceFragment implements
         Preference.OnPreferenceChangeListener {
     private static final String TAG = "Navigation";
@@ -55,10 +58,12 @@ public class Navigation extends SettingsPreferenceFragment implements
     private static final String KEY_VOLUME_KEY_CURSOR_CONTROL = "volume_key_cursor_control";
     private static final String VOLUME_ROCKER_WAKE = "volume_rocker_wake";
     private static final String KILL_APP_LONGPRESS_BACK = "kill_app_longpress_back";
+    private static final String NAVIGATION_BAR_TINT = "navigation_bar_tint";
 
     private ListPreference mVolumeKeyCursorControl;
     private SwitchPreference mVolumeRockerWake;
     private SwitchPreference mKillAppLongPressBack;
+    private ColorPickerPreference mNavbarButtonTint;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -84,6 +89,14 @@ public class Navigation extends SettingsPreferenceFragment implements
         int killAppLongPressBack = Settings.Secure.getInt(getContentResolver(),
                 KILL_APP_LONGPRESS_BACK, 0);
         mKillAppLongPressBack.setChecked(killAppLongPressBack != 0);
+
+        mNavbarButtonTint = (ColorPickerPreference) findPreference(NAVIGATION_BAR_TINT);
+        mNavbarButtonTint.setOnPreferenceChangeListener(this);
+        int intColor = Settings.System.getInt(getActivity().getContentResolver(),
+                Settings.System.NAVIGATION_BAR_TINT, 0xffffffff);
+        String hexColor = String.format("#%08x", (0xffffffff & intColor));
+        mNavbarButtonTint.setSummary(hexColor);
+        mNavbarButtonTint.setNewPreviewColor(intColor);
     }
 
     private ListPreference initActionList(String key, int value) {
@@ -124,6 +137,14 @@ public class Navigation extends SettingsPreferenceFragment implements
             boolean value = (Boolean) newValue;
             Settings.Secure.putInt(getContentResolver(), KILL_APP_LONGPRESS_BACK,
                     value ? 1 : 0);
+            return true;
+        } else if (preference == mNavbarButtonTint) {
+            String hex = ColorPickerPreference.convertToARGB(
+                    Integer.valueOf(String.valueOf(objValue)));
+            preference.setSummary(hex);
+            int intHex = ColorPickerPreference.convertToColorInt(hex);
+            Settings.System.putInt(getActivity().getContentResolver(),
+                    Settings.System.NAVIGATION_BAR_TINT, intHex);
             return true;
         }
         return false;
