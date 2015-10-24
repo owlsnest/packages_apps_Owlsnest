@@ -140,7 +140,7 @@ public class Navigation extends SettingsPreferenceFragment implements
             return true;
         } else if (preference == mNavbarButtonTint) {
             String hex = ColorPickerPreference.convertToARGB(
-                    Integer.valueOf(String.valueOf(objValue)));
+                    Integer.valueOf(String.valueOf(newValue)));
             preference.setSummary(hex);
             int intHex = ColorPickerPreference.convertToColorInt(hex);
             Settings.System.putInt(getActivity().getContentResolver(),
