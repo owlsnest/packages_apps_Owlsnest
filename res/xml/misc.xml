@@ -18,4 +18,14 @@
     android:layout="@layout/tab"
     xmlns:settings="http://schemas.android.com/apk/res/com.android.settings">
 
+    <PreferenceCategory
+        android:key="power_key"
+        android:title="@string/hardware_keys_power_key_title" >
+
+        <PreferenceScreen
+            android:key="power_menu"
+            android:title="@string/power_menu_title"
+            android:fragment="com.aosip.owlsnest.tabs.PowerMenuActions" />
+    </PreferenceCategory>
+
 </PreferenceScreen>
